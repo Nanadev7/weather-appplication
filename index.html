@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NANA'S Weather App</title>
+  <!-- FontAwesome for weather & UI icons -->
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"> -->
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <main class="app-container">
+    <!-- Top Header -->
+    <header class="top-bar">
+      <div class="location-info">
+        <h2 id="city-name">Lagos, NG</h2>
+        <p id="current-date">Loading date...</p>
+      </div>
+
+    </header>
+
+    <!-- Search Input with Action Button -->
+    <section class="search-box">
+      <input type="text" id="city-input" placeholder="Search city (e.g. Lagos, Abuja, Port Harcourt)..." tabindex="1" />
+      <button id="search-btn" type="button" aria-label="Search">
+        Search
+      </button>
+    </section>
+
+    <!-- Main Current Temp Card -->
+    <section class="hero-card">
+      <div class="hero-details">
+        <div class="hero-temp" id="current-temp">--°C</div>
+        <p id="weather-desc">Loading weather...</p>
+      </div>
+      <div class="hero-icon" id="hero-icon">
+        <i class="fa-solid fa-cloud-sun"></i>
+      </div>
+    </section>
+
+    <!-- Quick Stats Grid -->
+    <section class="stats-grid">
+      <div class="stat-card">
+        <i class="fa-solid fa-wind"></i>
+        <span>Wind</span>
+        <strong id="wind-speed">-- km/h</strong>
+      </div>
+      <div class="stat-card">
+        <i class="fa-solid fa-droplet"></i>
+        <span>Humidity</span>
+        <strong id="humidity">--%</strong>
+      </div>
+      <div class="stat-card">
+        <i class="fa-solid fa-cloud-rain"></i>
+        <span>Precipitation</span>
+        <strong id="precipitation">-- mm</strong>
+      </div>
+    </section>
+
+    <!-- 7-Day Forecast -->
+    <section class="weekly-section">
+      <h3 class="section-title">7-Day Weekly Report</h3>
+      <div class="weekly-list" id="weekly-list">
+        <!-- Generated via JS -->
+      </div>
+    </section>
+
+    <!-- Bottom Navigation -->
+    <!-- <nav class="nav-bar">
+      <button class="nav-item active" tabindex="2" aria-label="Home"><i class="fa-solid fa-house"></i></button>
+      <button class="nav-item" tabindex="3" aria-label="Cloud"><i class="fa-solid fa-cloud"></i></button>
+      <button class="nav-item" tabindex="4" aria-label="Location Map"><i class="fa-solid fa-map-location-dot"></i></button>
+      <button class="nav-item" tabindex="5" aria-label="Settings"><i class="fa-solid fa-gear"></i></button>
+    </nav> -->
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
