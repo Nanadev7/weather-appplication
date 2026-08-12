@@ -88,39 +88,10 @@ input:focus, button:focus {
   width: 100%;
   font-size: 14px;
 }
-.search-box {
-  display: flex;
-  align-items: center;
-  background-color: #f1f5f9;
-  border-radius: 12px;
-  padding: 4px 8px 4px 16px;
-}
 
-.search-box input {
-  flex: 1;
-  border: none;
-  background: transparent;
-  outline: none;
-  padding: 10px 0;
-  font-size: 1rem;
-}
-
-#search-btn {
-  background: #3b82f6;
-  color: #ffffff;
-  border: none;
-  border-radius: 8px;
-  padding: 8px 12px;
-  cursor: pointer;
-  transition: background-color 0.2s ease;
-}
-
-#search-btn:hover {
-  background-color: #2563eb;
-}
 /* Main Weather Card */
 .hero-card {
-  background: #ffffff;
+  background: #7d86af;
   border-radius: 24px;
   padding: 20px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
@@ -156,7 +127,7 @@ input:focus, button:focus {
 }
 
 .stat-card {
-  background: #eff6ff;
+  background: #376db4;
   border-radius: 16px;
   padding: 12px 8px;
   text-align: center;
@@ -171,7 +142,7 @@ input:focus, button:focus {
 .stat-card span {
   display: block;
   font-size: 11px;
-  color: #64748b;
+  color: #d6dbe2;
 }
 
 .stat-card strong {
@@ -257,11 +228,7 @@ input:focus, button:focus {
   color: white;
 }
 
-/*
-   RESPONSIVE MEDIA QUERIES (PC, Tablets, Smart TVs)
-    */
 
-/* Tablet & PC Monitor Layout (Width >= 768px) */
 @media screen and (min-width: 768px) {
   .app-container {
     max-width: 700px;

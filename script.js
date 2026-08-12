@@ -25,6 +25,14 @@ function getWeatherIconClass(condition) {
   return 'fa-smog';
 }
 
+function getEmoji(condition) {
+  const cond = condition.toLowerCase();
+  if (cond.includes('rain')) return '🌧️';       // U+1F327
+  if (cond.includes('clear') || cond.includes('sun')) return '☀️'; // U+2600
+  if (cond.includes('cloud')) return '⛅';      // U+26C5
+  if (cond.includes('thunder') || cond.includes('storm')) return '🌩️'; // U+1F329
+  return '🌫️'; // U+1F32B
+}
 function get7DaysFromToday() {
   const days = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
   const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];

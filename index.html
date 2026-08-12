@@ -3,66 +3,71 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Weather Dashboard</title>
-  <link rel="stylesheet" href="style.css">
+  <title>NANA'S Weather App</title>
+
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-  <div class="app-frame">
-    <!-- Top Bar -->
-    <div class="top-bar">
-      <span>09:41</span>
-      <span>📶 📡 🔋</span>
-    </div>
-
-    <!-- Search Section -->
-    <header class="search-box">
-      <input type="text" id="city-input" placeholder="Search any city worldwide...">
-      <button id="search-btn">🔍</button>
+  <main class="app-container">
+    <!-- Top Header -->
+    <header class="top-bar">
+      <div class="location-info">
+        <h2 id="city-name">Abuja NG</h2>
+        <p id="current-date">Loading date...</p>
+      </div>
     </header>
 
-    <!-- Hero Card -->
-    <main class="hero-card">
-      <div class="hero-top">
-        <div>
-          <h1 id="city-name">--</h1>
-          <p id="country-name" class="country">--</p>
-        </div>
-        <div id="weather-emoji" class="weather-badge">☀️</div>
-      </div>
-
-      <div class="temp-group">
-        <span id="current-temp">--</span><span class="deg">°C</span>
-      </div>
-
-      <p id="weather-desc" class="condition">Loading...</p>
-
-      <!-- Metrics -->
-      <div class="metrics-grid">
-        <div class="metric-card">
-          <span class="label">Feels Like</span>
-          <span id="feels-like" class="val">--</span>
-        </div>
-        <div class="metric-card">
-          <span class="label">Humidity</span>
-          <span id="humidity-val" class="val">--</span>
-        </div>
-        <div class="metric-card">
-          <span class="label">Wind</span>
-          <span id="wind-val" class="val">--</span>
-        </div>
-      </div>
-    </main>
-
-    <!-- Dynamic 7-Day Forecast Container -->
-    <section class="forecast-section">
-      <div class="forecast-header">
-        <h3>7-Day Forecast</h3>
-      </div>
-      <div id="forecast-list" class="forecast-list"></div>
+    <!-- Search Input -->
+    <section class="search-box">
+      <i class="fa-solid fa-magnifying-glass"></i>
+      <input type="text" id="city-input" placeholder="Search city (e.g. Lagos, Abuja, Port Harcourt)..." tabindex="1" />
     </section>
-  </div>
 
+    <!-- Main Current Temp Card -->
+     <!-- hero-card Shows the prominent temperature (#current-temp),
+      condition text (#weather-desc), and weather icon (#hero-icon). -->
+    <section class="hero-card">
+      <div class="hero-details">
+        <div class="hero-temp" id="current-temp">--°C</div>
+        <p id="weather-desc">Loading weather...</p>
+      </div>
+      <div class="hero-icon" id="hero-icon">
+        <i class="fa-solid fa-cloud-sun"></i>
+      </div>
+    </section>
+
+    <!-- Quick Stats Grid -->
+    <section class="stats-grid">
+      <div class="stat-card">
+        <i class="fa-solid fa-wind"></i>
+        <span>Wind</span>
+        <strong id="wind-speed">-- km/h</strong>
+      </div>
+      <div class="stat-card">
+        <i class="fa-solid fa-droplet"></i>
+        <span>Humidity</span>
+        <strong id="humidity">--%</strong>
+      </div>
+      <div class="stat-card">
+        <i class="fa-solid fa-cloud-rain"></i>
+        <span>Precipitation</span>
+        <strong id="precipitation">-- mm</strong>
+      </div>
+    </section>
+
+    <!-- 7-Day Forecast -->
+    <section class="weekly-section">
+      <h3 class="section-title">7-Day Weekly Report</h3>
+      <div class="weekly-list" id="weekly-list">
+        <!-- Generated via JS -->
+      </div>
+    </section>
+
+    
+  </main>
+
+  <!-- Custom JavaScript -->
   <script src="script.js"></script>
 </body>
 </html>
