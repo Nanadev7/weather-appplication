@@ -1,14 +1,13 @@
 import { API_KEY, BASE_URL } from './constants.js';
 
-// Search city by name via Geocoding API
 export async function searchLocations(query) {
   if (!query) return null;
 
   try {
-    const geoRes = await fetch(
+    const res = await fetch(
       `${BASE_URL}/geo/1.0/direct?q=${encodeURIComponent(query)}&limit=1&appid=${API_KEY}`
     );
-    const locations = await geoRes.json();
+    const locations = await res.json();
 
     if (!locations || locations.length === 0) {
       alert('City not found! Try searching for another city.');
@@ -17,12 +16,11 @@ export async function searchLocations(query) {
 
     return locations[0];
   } catch (err) {
-    console.error('Search error:', err);
+    console.error('Search API error:', err);
     throw err;
   }
 }
 
-// Fetch current weather and forecast by coordinates
 export async function fetchWeatherData(lat, lon) {
   try {
     const [currentRes, forecastRes] = await Promise.all([
@@ -31,7 +29,7 @@ export async function fetchWeatherData(lat, lon) {
     ]);
 
     if (!currentRes.ok || !forecastRes.ok) {
-      throw new Error('Location not found');
+      throw new Error('Failed to fetch weather data');
     }
 
     const currentData = await currentRes.json();
@@ -50,7 +48,7 @@ export async function fetchWeatherData(lat, lon) {
 
     return { currentData, dailyMap };
   } catch (err) {
-    console.error('Fetch weather error:', err);
+    console.error('Weather API error:', err);
     throw err;
   }
 }

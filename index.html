@@ -68,9 +68,17 @@
     </section>
 
   </main>
+ <script type="module" src="script.js"></script>
 
-  <!-- Custom JavaScript -->
-  <script type=" module" src="script.js"></script>
 </body>
 </html>
-<script type="module" src="App.js"></script>
+
+<!-- It is changed from script.js to App.js because App.js is now serving as the main entry point for your modular application.
+
+Here is why that change makes sense for your new structure:
+
+ Reflecting the Modular Architecture
+Before modularization, you had all your code in a single generic file named script.js.
+
+When breaking your project into multiple specific files (API.js, UI.js, constants.js), App.js 
+acts as the central hub (or controller) that imports and connects them all together. -->
