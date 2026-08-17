@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>NANA'S Weather App</title>
 
+  <!-- Font Awesome Icons -->
+  <!-- <link rel="stylesheet" href="https://.cloudflare.comcdnjs/ajax/libs/font-awesome/6.5.1/css/all.min.css"> -->
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -18,15 +20,16 @@
       </div>
     </header>
 
-    <!-- Search Input -->
+    <!-- Search Input & Button -->
     <section class="search-box">
       <i class="fa-solid fa-magnifying-glass"></i>
       <input type="text" id="city-input" placeholder="Search city (e.g. Lagos, Abuja, Port Harcourt)..." tabindex="1" />
+      <button type="button" id="search-btn">Search</button>
     </section>
 
     <!-- Main Current Temp Card -->
-     <!-- hero-card Shows the prominent temperature (#current-temp),
-      condition text (#weather-desc), and weather icon (#hero-icon). -->
+    <!-- hero-card Shows the prominent temperature (#current-temp),
+         condition text (#weather-desc), and weather icon (#hero-icon). -->
     <section class="hero-card">
       <div class="hero-details">
         <div class="hero-temp" id="current-temp">--°C</div>
@@ -64,10 +67,10 @@
       </div>
     </section>
 
-    
   </main>
 
   <!-- Custom JavaScript -->
-  <script src="script.js"></script>
+  <script type=" module" src="script.js"></script>
 </body>
 </html>
+<script type="module" src="App.js"></script>
