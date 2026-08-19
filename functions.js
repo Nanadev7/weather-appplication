@@ -1,4 +1,4 @@
-// Resolves FontAwesome icon class names based on weather conditions
+//FontAwesome icon class names based on weather conditions
 export function getWeatherIconClass(condition) {
   const cond = condition.toLowerCase();
   if (cond.includes('rain')) return 'fa-cloud-showers-heavy';
@@ -18,7 +18,7 @@ export function getEmoji(condition) {
   return '🌫️';
 }
 
-// Generates an array of date objects for the next 7 days
+//  array of date objects for the next 7 days
 export function get7DaysFromToday() {
   const days = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
   const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
